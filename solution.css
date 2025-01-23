@@ -1,0 +1,18 @@
+To fix the issue, we can increase the specificity of the `.container p` selector or use the !important flag (though this is generally discouraged for maintainability):
+
+```css
+div p {
+  color: blue;
+}
+
+.container p {
+  color: red !important; /* Less preferred solution */
+}
+
+/* Or a more specific selector */
+.container > p {
+  color: red;
+}
+```
+
+Using a more specific selector such as `.container > p` directly targets paragraph elements that are direct children of the element with class `container`, providing higher specificity without resorting to `!important`.
